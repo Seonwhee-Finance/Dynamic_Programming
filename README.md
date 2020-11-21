@@ -8,4 +8,4 @@ Dynamic programming(DP) is one of the algorithms which break a problem into smal
 This repository contains source codes implementing DP algorithms in three diffrent contexts: simple problems, Hidden Markov Model(HMM), Reinforcement Learning(RL).
 
 ### 3. References  
-Jones, N. C., & Pevzner, P. A. (2004). *An introduction to bioinformatics algorithms.* The MIT Press.
+Jones, N. C., & Pevzner, P. A. (2004). *An introduction to bioinformatics algorithms.* The MIT Press.  
