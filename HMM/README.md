@@ -54,7 +54,7 @@ Each cell gives you the probability to go from one part of speech to another.
 
 The smoothing was done as follows:
 
-$$ P(t_i | t_{i-1}) = \frac{C(t_{i-1}, t_{i}) + \alpha }{C(t_{i-1}) +\alpha * N}$$  
+$$[P(t_i | t_{i-1}) = \frac{C(t_{i-1}, t_{i}) + \alpha }{C(t_{i-1}) +\alpha * N}]$$  
 
 - $N$ is the total number of tags
 - $C(t_{i-1}, t_{i})$ is the count of the tuple (previous POS, current POS) in `transition_counts` dictionary.
