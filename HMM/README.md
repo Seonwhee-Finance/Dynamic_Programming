@@ -27,10 +27,17 @@ The Markov Model contains a number of states and the probability of transition b
 - A Markov Model utilizes a transition matrix, `T`.
 - A Hidden Markov Model adds an observation or emission matrix `E` which describes the probability of a visible observation when we are in a particular st
 - In this case, the emissions are the words in the corpus
-- The state, which is hidden, is the POS tag of that word.
+- The state, which is hidden, is the POS tag of that word.  
+  
+The 'states' are the Parts-of-speech designations found in the training data. They will also be referred to as 'tags' or POS in this assignment.  
+- "NN" is noun, singular, 
+- 'NNS' is noun, plural. 
+- In addition, there are helpful tags like '--s--' which indicate a start of a sentence.
+- You can get a more complete description at [Penn Treebank II tag set](https://www.clips.uantwerpen.be/pages/mbsp-tags). 
+
 
 ### Creating the 'T' transition probabilities matrix
-`emission_counts`, `transition_counts`, and `tag_counts` will allow you to quickly construct the
+
 - `T` transition probabilities matrix.
 - and the `E` emission probabilities matrix.
 
