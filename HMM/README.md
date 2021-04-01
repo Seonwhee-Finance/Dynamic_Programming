@@ -52,14 +52,7 @@ Each cell gives you the probability to go from one part of speech to another.
 - In other words, there is a 4.47e-8 chance of going from parts-of-speech `TO` to `RP`.
 - The sum of each row has to equal 1, because we assume that the next POS tag must be one of the available columns in the table.
 
-The smoothing was done as follows:
 
-$$[P(t_i | t_{i-1}) = \frac{C(t_{i-1}, t_{i}) + \alpha }{C(t_{i-1}) +\alpha * N}]$$  
-
-- $N$ is the total number of tags
-- $C(t_{i-1}, t_{i})$ is the count of the tuple (previous POS, current POS) in `transition_counts` dictionary.
-- $C(t_{i-1})$ is the count of the previous POS in the `tag_counts` dictionary.
-- $\alpha$ is a smoothing parameter.
 
 
 ### References  
