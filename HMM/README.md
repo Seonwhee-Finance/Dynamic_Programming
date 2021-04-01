@@ -34,7 +34,16 @@ The Markov Model contains a number of states and the probability of transition b
 - `T` transition probabilities matrix.
 - and the `E` emission probabilities matrix.
 
-Here is an example of what the `T` transition matrix would look like (it is simplified to 5 tags for viewing. It is 46x46 in this assignment.):  
+Here is an example of what the `T` transition matrix would look like:  
+
+|**T** |...|         RBS  |          RP  |         SYM  |      TO  |          UH|  ...|
+|---|---|---|---|---|---|---|---|   
+|**RBS**  |...|2.217069e-06  |2.217069e-06  |2.217069e-06  |0.008870  |2.217069e-06|...|  
+|**RP**   |...|3.756509e-07  |7.516775e-04  |3.756509e-07  |0.051089  |3.756509e-07|...|
+|**SYM**  |...|1.722772e-05  |1.722772e-05  |1.722772e-05  |0.000017  |1.722772e-05|...|
+|**TO**   |...|4.477336e-05  |4.472863e-08  |4.472863e-08  |0.000090  |4.477336e-05|...|
+|**UH**  |...|1.030439e-05  |1.030439e-05  |1.030439e-05  |0.061837  |3.092348e-02|...|
+| ... |...| ...          | ...          | ...          | ...      | ...        | ...|
 
 
 Note that the matrix above was computed with smoothing.
