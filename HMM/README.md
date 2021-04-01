@@ -62,7 +62,6 @@ Each cell gives you the probability to go from one part of speech to another.
 The matrix `E` is of dimension (num_tags, N), where num_tags is the number of possible parts-of-speech tags. 
 
 Here is an example of the matrix, only a subset of tags and words are shown: 
-<p style='text-align: center;'> <b>E Emissions Probability Matrix (subset)</b>  </p>
 
 |**E**| ...|          725 |     adroitly |    engineers |     promoted |      synergy| ...|
 |----|----|--------------|--------------|--------------|--------------|-------------|----|
@@ -73,7 +72,9 @@ Here is an example of the matrix, only a subset of tags and words are shown:
 |**RB**  | ...| 3.226454e-08 | **6.456135e-05** | 3.226454e-08 | 3.226454e-08 | 3.226454e-08| ...|
 |**RP**  | ...| 3.723317e-07 | 3.723317e-07 | 3.723317e-07 | **3.723317e-07** | 3.723317e-07| ...|
 | ...    | ...|     ...      |     ...      |     ...      |     ...      |     ...      | ...|
+  
 
+### Viterbi Algorithm and Dynamic Programming  
 
 
 
