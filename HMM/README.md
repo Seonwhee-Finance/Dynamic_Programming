@@ -36,10 +36,7 @@ The 'states' are the Parts-of-speech designations found in the training data. Th
 - You can get a more complete description at [Penn Treebank II tag set](https://www.clips.uantwerpen.be/pages/mbsp-tags). 
 
 
-### Creating the 'T' transition probabilities matrix
-
-- `T` transition probabilities matrix.
-- and the `E` emission probabilities matrix.
+### Transition probabilities matrix
 
 Here is an example of what the `T` transition matrix would look like:  
 
@@ -57,7 +54,25 @@ Note that the matrix above was computed with smoothing.
 
 Each cell gives you the probability to go from one part of speech to another.
 - In other words, there is a 4.47e-8 chance of going from parts-of-speech `TO` to `RP`.
-- The sum of each row has to equal 1, because we assume that the next POS tag must be one of the available columns in the table.
+- The sum of each row has to equal 1, because we assume that the next POS tag must be one of the available columns in the table.  
+
+
+### Emission probabilities matrix
+
+The matrix `E` is of dimension (num_tags, N), where num_tags is the number of possible parts-of-speech tags. 
+
+Here is an example of the matrix, only a subset of tags and words are shown: 
+<p style='text-align: center;'> <b>E Emissions Probability Matrix (subset)</b>  </p>
+
+|**E**| ...|          725 |     adroitly |    engineers |     promoted |      synergy| ...|
+|----|----|--------------|--------------|--------------|--------------|-------------|----|
+|**CD**  | ...| **8.201296e-05** | 2.732854e-08 | 2.732854e-08 | 2.732854e-08 | 2.732854e-08| ...|
+|**NN**  | ...| 7.521128e-09 | 7.521128e-09 | 7.521128e-09 | 7.521128e-09 | **2.257091e-05**| ...|
+|**NNS** | ...| 1.670013e-08 | 1.670013e-08 |**4.676203e-04** | 1.670013e-08 | 1.670013e-08| ...|
+|**VB**  | ...| 3.779036e-08 | 3.779036e-08 | 3.779036e-08 | 3.779036e-08 | 3.779036e-08| ...|
+|**RB**  | ...| 3.226454e-08 | **6.456135e-05** | 3.226454e-08 | 3.226454e-08 | 3.226454e-08| ...|
+|**RP**  | ...| 3.723317e-07 | 3.723317e-07 | 3.723317e-07 | **3.723317e-07** | 3.723317e-07| ...|
+| ...    | ...|     ...      |     ...      |     ...      |     ...      |     ...      | ...|
 
 
 
