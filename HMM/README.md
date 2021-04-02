@@ -76,9 +76,11 @@ Here is an example of the matrix, only a subset of tags and words are shown:
 
 ### Viterbi Algorithm and Dynamic Programming  
 #### Initialize  
-<img src = "Initialize4.png"/>
+<img src = "Initialize4.png"/>   
+
 #### Forward  
-<img src = "Forward4.png"/>
+<img src = "Forward4.png"/>   
+
 #### Backward  
 <img src = "Backwards5.png"/>
 
