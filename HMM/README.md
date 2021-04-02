@@ -24,8 +24,8 @@ Implementing a Hidden Markov Model (HMM) with a Viterbi decoder
 
 The Markov Model contains a number of states and the probability of transition between those states.
 - In this case, the states are the parts-of-speech.
-- A Markov Model utilizes a transition matrix, `T`.
-- A Hidden Markov Model adds an observation or emission matrix `E` which describes the probability of a visible observation when we are in a particular st
+- A Markov Model utilizes a transition matrix, `A`.
+- A Hidden Markov Model adds an observation or emission matrix `B` which describes the probability of a visible observation when we are in a particular st
 - In this case, the emissions are the words in the corpus
 - The state, which is hidden, is the POS tag of that word.  
   
@@ -38,9 +38,9 @@ The 'states' are the Parts-of-speech designations found in the training data. Th
 
 ### Transition probabilities matrix
 
-Here is an example of what the `T` transition matrix would look like:  
+Here is an example of what the `A` transition matrix would look like:  
 
-|**T** |...|         RBS  |          RP  |         SYM  |      TO  |          UH|  ...|
+|**A** |...|         RBS  |          RP  |         SYM  |      TO  |          UH|  ...|
 |---|---|---|---|---|---|---|---|   
 |**RBS**  |...|2.217069e-06  |2.217069e-06  |2.217069e-06  |0.008870  |2.217069e-06|...|  
 |**RP**   |...|3.756509e-07  |7.516775e-04  |3.756509e-07  |0.051089  |3.756509e-07|...|
@@ -59,11 +59,11 @@ Each cell gives you the probability to go from one part of speech to another.
 
 ### Emission probabilities matrix
 
-The matrix `E` is of dimension (num_tags, N), where num_tags is the number of possible parts-of-speech tags. 
+The matrix `B` is of dimension (num_tags, N), where num_tags is the number of possible parts-of-speech tags. 
 
 Here is an example of the matrix, only a subset of tags and words are shown: 
 
-|**E**| ...|          725 |     adroitly |    engineers |     promoted |      synergy| ...|
+|**B**| ...|          725 |     adroitly |    engineers |     promoted |      synergy| ...|
 |----|----|--------------|--------------|--------------|--------------|-------------|----|
 |**CD**  | ...| **8.201296e-05** | 2.732854e-08 | 2.732854e-08 | 2.732854e-08 | 2.732854e-08| ...|
 |**NN**  | ...| 7.521128e-09 | 7.521128e-09 | 7.521128e-09 | 7.521128e-09 | **2.257091e-05**| ...|
@@ -75,8 +75,12 @@ Here is an example of the matrix, only a subset of tags and words are shown:
   
 
 ### Viterbi Algorithm and Dynamic Programming  
-
-
+#### Initialize  
+<img src = "Initialize4.png"/>
+#### Forward  
+<img src = "Forward4.png"/>
+#### Backward  
+<img src = "Backwards5.png"/>
 
 ### References  
 Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*. Springer.
